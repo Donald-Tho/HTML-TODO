@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  font-family: georgia;
+}
+
+ul{
+  list-style-type: none;
+  border: 5;
+  margin: 5;
+}
+.inline-block-child{
+  display: inline-block;
+}
+
+ul li{
+  background-color:#999999;
+  user-select: none;
+  padding: 12px 8px 12px 40px;
+}
+
+ul li:nth-child(odd) {
+  background: #BBBBBB;
+}
+
+.close{
+  float: right;
+  padding: 12px 12px 12px 12px;
+}
