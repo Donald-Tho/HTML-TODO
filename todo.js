@@ -1,3 +1,5 @@
+var one = 1;
+
 function todo_submit(){
   var input = document.getElementById('userInput').value;
   document.getElementById('userInput').value="";
@@ -14,4 +16,23 @@ function todo_submit(){
   span.appendChild(txt);
   node.appendChild(span);
   todo_list.appendChild(node);
+}
+
+function todo_submit2(num) {
+  var userInput = $('#userInput').val();
+  $('#userInput').val("");
+
+  // callback
+  var closeButton = $('<span>')
+                      .addClass('close')
+                      .html('X')
+                      .on('click', function(){
+                        $(this).parent().remove()
+                      });
+
+  var $todoListItem = $('<li>')
+                    .append(userInput)
+                    .append(closeButton);
+
+  $('#list').append($todoListItem);
 }
